@@ -1,3 +1,6 @@
+## Pokedex app to improve and show you my skills in Web development with Angular and Bootstrap.
+`link` https://pokedex-jrsbaum.vercel.app
+
 # PokedexApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
