@@ -8,7 +8,18 @@
     src: url(assets/fonts/pokemon-Solid.ttf);
 }
 
-
 body {
     font-family: pokemon-Solid;
+}
+
+header {
+    padding: 20px 0px;
+    text-align: center;
+    background-color: RGB(59, 92, 167);
+}
+
+header h1{
+    text-transform: uppercase;    
+    color: RGB(255, 203, 3);
+    letter-spacing: 8px;
 }
