@@ -9,17 +9,22 @@
 }
 
 body {
-    font-family: pokemon-Solid;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header {
     padding: 20px 0px;
-    text-align: center;
-    background-color: RGB(59, 92, 167);
+    text-align: center; 
+    background-color: RGB(59, 92, 167); /*black*/
 }
 
 header h1{
+    font-family: pokemon-Solid;
     text-transform: uppercase;    
-    color: RGB(255, 203, 3);
+    color: RGB(255, 203, 3); /*yellow*/
     letter-spacing: 8px;
+}
+
+footer {
+    font-family: pokemon-Solid;
 }
