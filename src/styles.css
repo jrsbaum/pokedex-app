@@ -14,19 +14,12 @@ body {
 }
 
 header {
-    padding: 20px 0px;
-    text-align: center; 
-    background-color: RGB(59, 92, 167); /*blue*/
-    margin-bottom: 6px;
-}
-
-header h1{
     font-family: pokemon-Solid;
-    text-transform: uppercase;    
-    color: RGB(255, 203, 3); /*yellow*/
-    letter-spacing: 8px;
+    letter-spacing: 6px;
+
 }
 
 footer {
     font-family: pokemon-Solid;
+    
 }
