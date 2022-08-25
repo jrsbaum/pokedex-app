@@ -10,12 +10,14 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    
 }
 
 header {
     padding: 20px 0px;
     text-align: center; 
-    background-color: RGB(59, 92, 167); /*black*/
+    background-color: RGB(59, 92, 167); /*blue*/
+    margin-bottom: 6px;
 }
 
 header h1{
