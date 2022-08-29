@@ -1,6 +1,10 @@
 ## Pokedex app to improve and show you my skills in Web development with Angular and Bootstrap.
 `link` https://pokedex-jrsbaum.vercel.app
 
+## Open API
+For this project I used the `PokeAPI`. https://pokeapi.co/about 
+PokeAPI provides a RESTful API interface to highly detailed objects built from thousands of lines of data related to Pokémon.
+
 # PokedexApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
