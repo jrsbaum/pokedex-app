@@ -2,8 +2,7 @@ import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-card',
-  templateUrl: './pokemon-card.component.html',
-  styleUrls: ['./pokemon-card.component.css']
+  templateUrl: './pokemon-card.component.html',  
 })
 export class PokemoncardComponent {
   @Input()
@@ -12,12 +11,16 @@ export class PokemoncardComponent {
   @Input()
   number: number;
 
+  @Input()
+  type: string;
+
   getImagePokemon () {
     const formattedNumber = this.leadingZero(this.number);
 
     return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${formattedNumber}.png`;
   }
 
+ 
   leadingZero(str: string | number, size = 3): string {
     let s = String(str);
 
