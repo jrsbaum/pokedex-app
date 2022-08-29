@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemoncardComponent } from './components/pokemon-card/pokemon-card.component';
+import { HttpClientModule} from '@angular/common/http';
+import { PokemonService } from './services/pokemon.service';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,11 @@ import { PokemoncardComponent } from './components/pokemon-card/pokemon-card.com
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
