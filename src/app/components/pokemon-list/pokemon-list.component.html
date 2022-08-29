@@ -1,9 +1,9 @@
 <app-pokemon-card
     *ngFor="let pokemon of pokemons; index as i" 
-    [pokemon]="pokemon"
+    [pokemon]="pokemon.name"
     [number]="i + 1"
+    [type] = "pokemon.types[0].type.name"
+    
 ></app-pokemon-card>
 
-<!-- <div *ngFor="let pokemon of pokemons" > Pokemon: 
-    {{ pokemon }}
-</div> -->
+
