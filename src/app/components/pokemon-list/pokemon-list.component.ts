@@ -4,12 +4,11 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
+  styleUrls: ['./pokemon-list.component.css'],
 })
 export class PokemonListComponent implements OnInit {
   pokemons: any[] = [];
-  pokemon: string;
-  number: number;
-  type: string;
+  species: any[] = [];
 
   constructor(public pokemonService: PokemonService) {}
 
@@ -21,9 +20,15 @@ export class PokemonListComponent implements OnInit {
           .subscribe((uniqResponse: any) => {
             this.pokemons.push(uniqResponse);
           });
+        this.pokemonService
+          .getSpecies(result.name)
+          .subscribe((uniqResponse: any) => {
+            this.species.push(uniqResponse);
+          });
       });
     });
   }
+
   getImagePokemon(idx: any) {
     let s = '00';
 
@@ -35,11 +40,5 @@ export class PokemonListComponent implements OnInit {
     }
 
     return s;
-  }
-
-  pad(num: any, size: any) {
-    num = num.toString();
-    while (num.length < size) num = '0' + num;
-    return num;
   }
 }

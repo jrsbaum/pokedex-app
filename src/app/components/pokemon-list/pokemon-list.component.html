@@ -1,21 +1,49 @@
-<div class="row">
-  <div class="col-sm-6 col-md-3 ml-2 mt-2" *ngFor="let pokemon of pokemons; let idx = index">
-    <div class="card">
-      <div class="card-body">
-        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{getImagePokemon(idx) + pokemon.id}}.png" alt="">
-        <h5 class="card-title">
-          <strong> {{ pokemon.name }} </strong>
-        </h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+<div class="container">
+  <div class="row">
+    <div
+      class="col-sm-6 col-md-3 ml-2 mt-2"
+      *ngFor="let pokemon of pokemons; let idx = index"
+    >
+      <div class="card-container">
+        <div class="card">
+          <div class="front">
+            <div class="content">
+              <div class="main">
+                <img
+                  src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{
+                    getImagePokemon(idx) + pokemon.id
+                  }}.png"
+                  alt=""
+                />
+                <h3 class="name">
+                  <strong> {{ pokemon.name }} </strong>
+                </h3>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <strong>
+                    N°{{ pokemon.id }} | Type: {{ pokemon.types[0].type.name }}
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="back">
+            <div class="header">
+              <h5 class="description">Pokémon Description</h5>
+            </div>
+            <div class="content">
+              <div class="main">
+                <p class="text-center">
+                  {{ species[idx].flavor_text_entries[0].flavor_text }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <strong> N°{{ pokemon.id }} | Type: {{ pokemon.types[0].type.name }} </strong>
-        </li>
-      </ul>
     </div>
   </div>
+  <div class="space-200"></div>
 </div>
