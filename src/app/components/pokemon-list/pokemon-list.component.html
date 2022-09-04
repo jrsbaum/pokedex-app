@@ -1,9 +1,21 @@
-<app-pokemon-card
-    *ngFor="let pokemon of pokemons; index as i" 
-    [pokemon]="pokemon.name"
-    [number]="i + 1"
-    [type] = "pokemon.types[0].type.name"
-    
-></app-pokemon-card>
-
-
+<div class="row">
+  <div class="col-sm-6 col-md-3 ml-2 mt-2" *ngFor="let pokemon of pokemons; let idx = index">
+    <div class="card">
+      <div class="card-body">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{getImagePokemon(idx) + pokemon.id}}.png" alt="">
+        <h5 class="card-title">
+          <strong> {{ pokemon.name }} </strong>
+        </h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong> N°{{ pokemon.id }} | Type: {{ pokemon.types[0].type.name }} </strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

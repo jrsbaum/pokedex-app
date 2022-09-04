@@ -7,7 +7,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
-import { PokemoncardComponent } from './components/pokemon-card/pokemon-card.component';
 import { HttpClientModule} from '@angular/common/http';
 import { PokemonService } from './services/pokemon.service';
 
@@ -16,8 +15,7 @@ import { PokemonService } from './services/pokemon.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PokemonListComponent,
-    PokemoncardComponent
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
