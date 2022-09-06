@@ -1,19 +1,29 @@
 <div class="container">
   <div class="row">
     <div
-      class="col-sm-6 col-md-3 ml-2 mt-2"
-      *ngFor="let pokemon of pokemons; let idx = index"
+      class="col-md-4 ml-2 mt-2"
+      *ngFor="let pokemon of pokemons; let idx = index; let x"
     >
       <div class="card-container">
         <div class="card">
-          <div class="front">
+          <div
+            class="front"
+            [ngStyle]="{
+              'background-color':
+                getColors(pokemon.types[0]?.type.name) ==
+                pokemon.types[0]?.type.name
+                  ? x
+                  : '#993399'
+            }"
+          >
             <div class="content">
               <div class="main">
                 <img
+                  class="mx-auto d-block"
+                  alt="{{ pokemon.id }}"
                   src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{
                     getImagePokemon(idx) + pokemon.id
                   }}.png"
-                  alt=""
                 />
                 <h3 class="name">
                   <strong> {{ pokemon.name }} </strong>
@@ -21,25 +31,76 @@
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                  <strong>
-                    N°{{ pokemon.id }} | Type: {{ pokemon.types[0].type.name }}
-                  </strong>
+                  <p class="text-center">
+                    <strong> #{{ pokemon.id }} </strong>
+                  </p>
+                </li>
+                <li class="list-group-item">
+                  <p class="text-center text-uppercase">
+                    <strong>
+                      {{ pokemon.types[0].type.name }} <br />
+                      {{ pokemon.types[1]?.type.name }}
+                    </strong>
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
-
-          <div class="back">
-            <div class="header">
-              <h5 class="description">Pokémon Description</h5>
-            </div>
+          <!-- back-card -->
+          <div
+            class="back"
+            [ngStyle]="{
+              'background-color':
+                pokemon.types[0]?.type.name === 'grass' ? '#d2f2c2' : '#993399'
+            }"
+          >
             <div class="content">
-              <div class="main">
-                <p class="text-center">
-                  {{ species[idx].flavor_text_entries[0].flavor_text }}
-                </p>
-              </div>
+              <img
+                class="mx-auto d-block"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/{{
+                  pokemon.id
+                }}.png"
+                alt=""
+              />
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong>
+                    {{ pokemon.stats[0].stat.name }}:{{
+                      pokemon.stats[0].base_stat
+                    }}</strong
+                  >
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong>
+                    {{ pokemon.stats[1].stat.name }}:{{
+                      pokemon.stats[1].base_stat
+                    }}</strong
+                  >
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong>
+                    {{ pokemon.stats[2].stat.name }}:{{
+                      pokemon.stats[2].base_stat
+                    }}
+                  </strong>
+                </p>
+              </li>
+              <li class="list-group-item">
+                <p class="text-center">
+                  <strong>
+                    {{ pokemon.stats[5].stat.name }}:{{
+                      pokemon.stats[5].base_stat
+                    }}
+                  </strong>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
