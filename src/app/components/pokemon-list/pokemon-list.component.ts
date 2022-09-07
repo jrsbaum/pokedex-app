@@ -29,17 +29,10 @@ export class PokemonListComponent implements OnInit {
     });
   }
 
-  getImagePokemon(idx: any) {
-    let s = '00';
+  getImagePokemon(num: any) {
+    const zeroPad = String(num).padStart(3, '0');
 
-    if (idx >= 9) {
-      s = '0';
-    }
-    if (idx >= 99) {
-      s = '';
-    }
-
-    return s;
+    return zeroPad;
   }
   getColors(tipo: any) {
     let x = '';

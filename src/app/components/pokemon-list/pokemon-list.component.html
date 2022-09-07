@@ -2,7 +2,7 @@
   <div class="row">
     <div
       class="col-md-4 ml-2 mt-2"
-      *ngFor="let pokemon of pokemons; let idx = index"
+      *ngFor="let pokemon of pokemons"
     >
       <div class="card-container">
         <div class="card">
@@ -18,7 +18,7 @@
                   class="mx-auto d-block"
                   alt="{{ pokemon.id }}"
                   src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{
-                    getImagePokemon(idx) + pokemon.id
+                    getImagePokemon(pokemon.id)
                   }}.png"
                 />
                 <h3 class="name">
