@@ -79,6 +79,9 @@ export class PokemonListComponent implements OnInit {
     if (tipo == 'fighting') {
       x = '#fcada9';
     }
+    if (tipo == 'bug') {
+      x = '#e0e8a2';
+    }
 
     if (tipo == 'psychic') {
       x = '#ffc9da';

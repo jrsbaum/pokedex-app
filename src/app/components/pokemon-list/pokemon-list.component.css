@@ -30,10 +30,10 @@ body {
 }
 
 .card {
-  -webkit-transition: -webkit-transform 1.0s;
-  -moz-transition: -moz-transform 1.0s;
-  -o-transition: -o-transform 1.0s;
-  transition: transform 1.0s;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
