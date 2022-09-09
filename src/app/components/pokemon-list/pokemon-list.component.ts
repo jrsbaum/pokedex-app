@@ -18,7 +18,8 @@ export class PokemonListComponent implements OnInit {
         this.pokemonService
           .getDetails(result.name)
           .subscribe((uniqResponse: any) => {
-            this.pokemons.push(uniqResponse);
+            const index = uniqResponse.id - 1;
+            this.pokemons[index] = uniqResponse;
           });
         this.pokemonService
           .getSpecies(result.name)
