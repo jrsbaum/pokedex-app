@@ -34,81 +34,82 @@ export class PokemonListComponent implements OnInit {
 
     return zeroPad;
   }
-  getColors(tipo: any) {
+
+  getColors(type: any) {
     let x = '';
 
-    if (tipo == 'grass') {
+    if (type == 'grass') {
       x = '#d2f2c2';
     }
 
-    if (tipo == 'poison') {
+    if (type == 'poison') {
       x = '#f7cdf7';
     }
 
-    if (tipo == 'fire') {
+    if (type == 'fire') {
       x = '#ffd1b5';
     }
 
-    if (tipo == 'flying:') {
+    if (type == 'flying:') {
       x = '#eae3ff';
     }
 
-    if (tipo == 'water') {
+    if (type == 'water') {
       x = '#c2f3ff';
     }
 
-    if (tipo == 'normal') {
+    if (type == 'normal') {
       x = '#e6e6c3';
     }
 
-    if (tipo == 'electric') {
+    if (type == 'electric') {
       x = '#fff1ba';
     }
 
-    if (tipo == 'ground') {
+    if (type == 'ground') {
       x = '#e0ccb1';
     }
 
-    if (tipo == 'fighting') {
+    if (type == 'fighting') {
       x = '#fcada9';
     }
-    if (tipo == 'bug') {
+    if (type == 'bug') {
       x = '#e0e8a2';
     }
 
-    if (tipo == 'psychic') {
+    if (type == 'psychic') {
       x = '#ffc9da';
     }
 
-    if (tipo == 'rock') {
+    if (type == 'rock') {
       x = '#f0e09c';
     }
 
-    if (tipo == 'fairy') {
+    if (type == 'fairy') {
       x = '#ffdee5';
     }
 
-    if (tipo == 'steel') {
+    if (type == 'steel') {
       x = '#e6eaf0';
     }
 
-    if (tipo == 'ice') {
+    if (type == 'ice') {
       x = '#e8feff';
     }
 
-    if (tipo == 'steel') {
+    if (type == 'steel') {
       x = '#e6eaf0';
     }
 
-    if (tipo == 'ghost') {
+    if (type == 'ghost') {
       x = '#dbbaff';
     }
 
-    if (tipo == 'dragon') {
+    if (type == 'dragon') {
       x = '#c4bdff';
     }
 
-    if (tipo == 'dark') {
+    if (type == 'dark') {
       x = '#a9abb0';
     }
 

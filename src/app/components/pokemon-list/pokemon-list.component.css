@@ -1,16 +1,6 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  margin-top: 60px;
-  font-size: 14px;
   background-color: #e5e9ed;
-}
-
-.card-container {
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-  margin-bottom: 30px;
 }
 
 .card-container:not(.manual-flip):hover .card,
@@ -19,14 +9,6 @@ body {
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
-}
-
-.card-container.static:hover .card,
-.card-container.static.hover .card {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  transform: none;
 }
 
 .card {
@@ -44,18 +26,10 @@ body {
 .front,
 .back {
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #fff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
-}
-
-.front {
-  z-index: 2;
 }
 
 .back {
@@ -66,86 +40,14 @@ body {
   z-index: 3;
 }
 
-.card {
-  background: none repeat scroll 0 0 #ffffff;
-  border-radius: 4px;
-  color: #444444;
-}
-
 .card-container,
 .front,
 .back {
   width: 100%;
   height: 420px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
+  margin-bottom: 10px;
 }
 
-.card .content {
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: none;
-  padding: 10px 20px 20px;
-}
 
-.card .content .main {
-  min-height: 160px;
-}
 
-.card .back .content .main {
-  height: 215px;
-}
-
-.card .name {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 22px;
-  line-height: 28px;
-  margin: 10px 0 0;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.card h5 {
-  margin: 5px 0;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.card .header {
-  padding: 15px 20px;
-  height: 90px;
-}
-
-.card .description {
-  font-family: "Courier New", Courier, monospace;
-  border-bottom: 1px solid #eeeeee;
-  color: #999999;
-  font-size: 14px;
-  font-weight: 400;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .front,
-  .back {
-    -ms-backface-visibility: visible;
-    backface-visibility: visible;
-  }
-
-  .back {
-    visibility: hidden;
-    transition: all 0.2s cubic-bezier(0.92, 0.01, 0.83, 0.67);
-  }
-
-  .front {
-    z-index: 4;
-  }
-
-  .card-container:not(.manual-flip):hover .back,
-  .card-container.manual-flip.hover .back {
-    z-index: 5;
-    visibility: visible;
-  }
-}

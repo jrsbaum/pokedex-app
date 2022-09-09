@@ -1,13 +1,10 @@
 <div class="container">
   <div class="row">
-    <div
-      class="col-md-4 ml-2 mt-2"
-      *ngFor="let pokemon of pokemons"
-    >
+    <div class="col-md-4 ml-2 mt-2" *ngFor="let pokemon of pokemons">
       <div class="card-container">
         <div class="card">
           <div
-            class="front"
+            class="front" style="border-radius: 15px;"
             [ngStyle]="{
               'background-color': getColors(pokemon.types[0]?.type.name)
             }"
@@ -21,13 +18,13 @@
                     getImagePokemon(pokemon.id)
                   }}.png"
                 />
-                <h3 class="name">
+                <h3 class="name text-center">
                   <strong> {{ pokemon.name }} </strong>
                 </h3>
               </div>
               <ul
                 class="list-group list-group-flush"
-                style="border-radius: 15px"
+                style="border-radius: 15px; margin: 20px"
               >
                 <li class="list-group-item">
                   <p class="text-center">
